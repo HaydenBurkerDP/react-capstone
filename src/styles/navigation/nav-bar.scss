@@ -1,0 +1,40 @@
+.nav-bar-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.2rem;
+  font-size: 16pt;
+  @include box-shadow;
+  position: sticky;
+  top: 0;
+  background-color: white;
+
+  .left-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+
+    .icon {
+      color: gray;
+      transition: 0.5s;
+
+      &:hover {
+        color: green;
+      }
+    }
+  }
+
+  .right-icons {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+
+    .icon {
+      color: gray;
+      transition: 0.5s;
+
+      &:hover {
+        color: green;
+      }
+    }
+  }
+}
