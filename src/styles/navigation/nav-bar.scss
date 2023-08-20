@@ -12,28 +12,28 @@
     display: flex;
     justify-content: space-around;
     width: 300px;
-
-    .icon {
-      color: gray;
-      transition: 0.5s;
-
-      &:hover {
-        color: green;
-      }
-    }
   }
 
   .right-icons {
     display: flex;
     justify-content: space-around;
     width: 200px;
+  }
 
-    .icon {
+  .left-icons,
+  .right-icons {
+    a {
       color: gray;
-      transition: 0.5s;
 
+      .icon {
+        transition: 0.5s;
+      }
       &:hover {
         color: green;
+      }
+
+      &.active {
+        color: black;
       }
     }
   }

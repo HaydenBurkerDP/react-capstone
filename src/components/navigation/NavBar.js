@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
@@ -12,27 +12,27 @@ export default function NavBar() {
   return (
     <div className="nav-bar-container">
       <div className="left-icons">
-        <Link to="/">
+        <NavLink exact to="/">
           <FontAwesomeIcon className="icon" icon={faHouse} />
-        </Link>
+        </NavLink>
 
-        <Link to="/about">
+        <NavLink to="/about">
           <FontAwesomeIcon className="icon" icon={faUser} />
-        </Link>
+        </NavLink>
 
-        <Link to="/contact">
+        <NavLink to="/contact">
           <FontAwesomeIcon className="icon" icon={faEnvelope} />
-        </Link>
+        </NavLink>
       </div>
 
       <div className="right-icons">
-        <Link to="/products">
+        <NavLink to="/products">
           <FontAwesomeIcon className="icon" icon={faGift} />
-        </Link>
+        </NavLink>
 
-        <Link to="/cart">
+        <NavLink to="/cart">
           <FontAwesomeIcon className="icon" icon={faCartShopping} />
-        </Link>
+        </NavLink>
       </div>
     </div>
   );

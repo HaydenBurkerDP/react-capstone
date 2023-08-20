@@ -1,0 +1,12 @@
+.contact-page-container {
+  .name-wrapper {
+    .name-fields {
+      display: flex;
+
+      .name-field {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
