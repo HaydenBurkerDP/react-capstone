@@ -17,7 +17,7 @@ export default function ProductCard(props) {
       <img className="product-img" src={product.image} alt={product.title} />
       <p className="description">{truncate(product.description, 60)}</p>
       <p>${product.price}</p>
-      <div>
+      <div className="product-btns">
         <Link to={`/product/${product.id}`}>
           <button>See all details</button>
         </Link>

@@ -1,4 +1,16 @@
 .products-container {
+  margin: 0px 50px;
+
+  .title {
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .filters-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .product-list-wrapper {
     display: flex;
     justify-content: center;

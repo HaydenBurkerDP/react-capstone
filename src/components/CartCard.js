@@ -17,9 +17,11 @@ export default function CartCard(props) {
         <p className="description">{truncate(product.description, 80)}</p>
         <p>${product.price}</p>
         <p>Amount: {product.amount}</p>
-        <button onClick={addAmount}>+</button>
-        <button onClick={removeAmount}>-</button>
-        <button onClick={removeFromCart}>Remove From Cart</button>
+        <div className="cart-btns">
+          <button onClick={addAmount}>+</button>
+          <button onClick={removeAmount}>-</button>
+          <button onClick={removeFromCart}>Remove From Cart</button>
+        </div>
       </div>
     </span>
   );

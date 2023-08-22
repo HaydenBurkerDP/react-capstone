@@ -38,7 +38,7 @@ export default function Cart() {
 
   return (
     <div className="cart-container">
-      <h1>Cart</h1>
+      <h1 className="title">Shopping Cart</h1>
       <div className="cart-list-wrapper">
         {shoppingCart.map((product) => (
           <CartCard
@@ -50,7 +50,11 @@ export default function Cart() {
           />
         ))}
       </div>
-      <h1>Total Cost: ${displayPrice(totalCost)}</h1>
+
+      <div className="checkout-wrapper">
+        <h1>Total Cost: ${displayPrice(totalCost)}</h1>
+        <button className="checkout-btn">Proceed to checkout</button>
+      </div>
     </div>
   );
 }

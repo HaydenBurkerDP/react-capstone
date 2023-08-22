@@ -1,37 +1,75 @@
 import { useState } from "react";
 
 export default function Contact() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
+  }
+
+  function isFormFilled() {
+    return firstName && lastName && email && message;
+  }
+
   return (
     <div className="contact-page-container">
-      <h1>Contact</h1>
-      <form>
-        <div className="name-wrapper">
-          <p>Name</p>
+      <div className="contact-header">
+        <h1>Contact Us</h1>
+        <p>Have any questions? We'd love to hear from you.</p>
+      </div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <p>Name</p>
 
-          <div className="name-fields">
-            <div className="name-field">
-              <label htmlFor="first-name">First</label>
-              <input type="text" />
-            </div>
+        <div className="name-fields">
+          <div className="name-field">
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+            <label htmlFor="first-name">First</label>
+          </div>
 
-            <div className="name-field">
-              <label htmlFor="last-name">Last</label>
-              <input type="text" />
-            </div>
+          <div className="name-field">
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <label htmlFor="last-name">Last</label>
           </div>
         </div>
 
-        <div className="email-wrapper">
-          <p>Email</p>
-          <input type="text" />
-        </div>
+        <p>Email</p>
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
 
-        <div className="message-wrapper">
-          <p>Message</p>
-          <textarea></textarea>
-        </div>
+        <p>Message</p>
+        <textarea
+          rows="10"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
 
-        <button type="submit">Submit</button>
+        <div className="submit-btn-wrapper">
+          <button
+            disabled={!isFormFilled()}
+            className="submit-btn"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -11,6 +11,14 @@ export default function Product(props) {
       .catch((error) => console.error(error));
   }, [props.match.params.slug]);
 
+  if (product.id === undefined) {
+    return (
+      <div className="product-page-container">
+        <h1 className="title">Loading Product...</h1>;
+      </div>
+    );
+  }
+
   return (
     <div className="product-page-container">
       <img className="product-img" src={product.image} alt="Product" />

@@ -11,4 +11,10 @@
     width: 300px;
     height: 300px;
   }
+
+  .product-btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 }

@@ -1,10 +1,35 @@
 .cart-container {
   margin: 0px 50px;
 
+  .title {
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid lightgray;
+  }
+
   .cart-list-wrapper {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
+  }
+
+  .checkout-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .checkout-btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      transition: 0.5s;
+      background-color: #444444;
+      color: white;
+
+      &:hover {
+        background-color: green;
+        cursor: pointer;
+      }
+    }
   }
 }
