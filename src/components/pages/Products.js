@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 import ProductCard from "../ProductCard";
 
 export default function Products() {
@@ -7,17 +10,6 @@ export default function Products() {
   const [category, setCategory] = useState("");
   const [sort, setSort] = useState("");
   const [direction, setDirection] = useState("");
-
-  const categories = getCategories();
-
-  function getCategories() {
-    const categories = [];
-    products.forEach((product) => {
-      if (categories.includes(product.category)) return;
-      categories.push(product.category);
-    });
-    return categories;
-  }
 
   useEffect(() => {
     const controller = new AbortController();
@@ -72,6 +64,8 @@ export default function Products() {
       <h1 className="title">Products</h1>
       <div className="filters-container">
         <div className="search-wrapper">
+          <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
+
           <input
             type="text"
             placeholder="Search"
@@ -81,39 +75,38 @@ export default function Products() {
         </div>
 
         <div className="filters-wrapper">
+          <label htmlFor="filter-category">Filter Category</label>
+
           <select
             name="filter-category"
             id="filter-category"
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option value="">Filter By</option>
-            {categories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
+            <option value="">All</option>
+            <option value="men's clothing">Men's clothing</option>
+            <option value="jewelery">Jewelry</option>
+            <option value="electronics">Electronics</option>
+            <option value="women's clothing">Women's clothing</option>
           </select>
+        </div>
+
+        <div className="sort-wrapper">
+          <label htmlFor="sort">Sort</label>
 
           <select
             name="sort"
             id="sort"
-            onChange={(e) => setSort(e.target.value)}
+            onChange={(e) => {
+              const [sort, direction] = e.target.value.split("-");
+              setSort(sort);
+              setDirection(direction);
+            }}
           >
-            <option value="id">Sort By</option>
-            <option value="title">Title</option>
-            <option value="description">Description</option>
-            <option value="category">Category</option>
-            <option value="price">Price</option>
-          </select>
-
-          <select
-            name="direction"
-            id="direction"
-            onChange={(e) => setDirection(e.target.value)}
-          >
-            <option value="asc">Order By</option>
-            <option value="asc">Ascending</option>
-            <option value="desc">Decending</option>
+            <option value="id-asc">None</option>
+            <option value="title-asc">Alphabetical A-Z</option>
+            <option value="title-desc">Alphabetical Z-A</option>
+            <option value="price-asc">Price low to high</option>
+            <option value="price-desc">Price high to low</option>
           </select>
         </div>
       </div>

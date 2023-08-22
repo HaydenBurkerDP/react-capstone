@@ -9,6 +9,40 @@
   .filters-container {
     display: flex;
     justify-content: space-between;
+
+    .search-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      border: 1px solid gray;
+      border-radius: 0.3rem;
+      padding: 0.3rem;
+
+      .icon {
+        color: gray;
+      }
+
+      input {
+        border: none;
+        background: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .filters-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .sort-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
   }
 
   .product-list-wrapper {
