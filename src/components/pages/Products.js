@@ -27,7 +27,7 @@ export default function Products() {
       });
 
     return () => controller.abort();
-  }, [products.length]);
+  }, []);
 
   function renderProducts() {
     let renderedProducts = products
