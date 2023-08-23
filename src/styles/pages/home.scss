@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     margin: 1.5% 10%;
+    min-width: 650px;
 
     .logo {
       display: flex;
@@ -39,8 +40,8 @@
         .icon {
           color: green;
           font-size: 20pt;
-
           transition: 0.3s;
+
           &:hover {
             font-size: 24pt;
           }
@@ -63,8 +64,10 @@
     @include dark-gradient;
 
     .product-image {
-      width: 777px;
-      height: 650px;
+      width: 600px;
+      height: 550px;
+      padding: 0px 50px;
+      max-width: 80vw;
     }
 
     .context-wrapper {
@@ -72,7 +75,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 800px;
+      width: 700px;
       margin: 50px 0px;
 
       .upper-text-container {
@@ -135,7 +138,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 390px;
+      width: 350px;
 
       .inner-product-content-wrapper {
         display: flex;

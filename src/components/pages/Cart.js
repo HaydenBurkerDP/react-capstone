@@ -6,6 +6,8 @@ import {
   removeFromCart,
   saveShoppingCart,
 } from "../util/shoppingCart";
+import { Link } from "react-router-dom";
+
 import CartCard from "../CartCard";
 
 export default function Cart() {
@@ -34,6 +36,21 @@ export default function Cart() {
       saveShoppingCart(cart);
       return cart;
     });
+  }
+
+  if (shoppingCart.length === 0) {
+    return (
+      <div className="cart-container">
+        <h1 className="title">Shopping Cart</h1>
+        <div className="empty-cart-message">
+          <h1>Your cart is empty!</h1>
+
+          <Link to="/products">
+            <button className="shop-now-btn">Shop Now</button>
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (

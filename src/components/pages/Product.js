@@ -6,6 +6,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
+import { addToCart } from "../util/shoppingCart";
+
 export default function Product(props) {
   const [product, setProduct] = useState({});
 
@@ -63,6 +65,9 @@ export default function Product(props) {
           </div>
           <p>{product.rating?.count} ratings</p>
         </div>
+        <button className="cart-btn" onClick={() => addToCart(product)}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );
