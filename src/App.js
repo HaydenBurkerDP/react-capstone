@@ -9,9 +9,6 @@ import Cart from "./components/pages/Cart";
 import NavBar from "./components/navigation/NavBar";
 import product from "./components/pages/Product";
 import Footer from "./components/navigation/Footer";
-import solidIcons from "./icons/solidIcons";
-
-solidIcons();
 
 function App() {
   return (

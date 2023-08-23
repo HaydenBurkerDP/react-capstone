@@ -5,8 +5,8 @@
   padding: 0 3%;
   margin-top: auto;
   height: 60px;
-  background-color: gray;
-  color: white;
+  background-color: $gray;
+  color: $white;
 
   .footer-left {
     width: 150px;
@@ -18,6 +18,10 @@
   .footer-center {
     p {
       margin: 0;
+      font-size: 120%;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: underline;
     }
   }
 
@@ -27,11 +31,11 @@
     width: 150px;
 
     .icon {
-      color: white;
+      color: $white;
       transition: 0.5s;
 
       &:hover {
-        color: green;
+        color: $green;
       }
     }
   }

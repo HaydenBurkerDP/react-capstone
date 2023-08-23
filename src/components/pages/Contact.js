@@ -37,6 +37,7 @@ export default function Contact() {
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
+
             <label htmlFor="first-name">First</label>
           </div>
 
@@ -46,11 +47,13 @@ export default function Contact() {
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
+
             <label htmlFor="last-name">Last</label>
           </div>
         </div>
 
         <p>Email</p>
+
         <input
           type="text"
           value={email}
@@ -58,6 +61,7 @@ export default function Contact() {
         />
 
         <p>Message</p>
+
         <textarea
           rows="10"
           value={message}

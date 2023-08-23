@@ -10,6 +10,7 @@ export default function Home() {
       <div className="upper-content-wrapper">
         <div className="logo">
           <img src={handoBlack} alt="logo" />
+
           <div className="title">HANDO</div>
         </div>
 
@@ -26,7 +27,6 @@ export default function Home() {
 
       <div className="mid-content-wrapper">
         <img className="product-image" src={tvScreen} alt="Product" />
-        {/* <img className="us-image" src={us} alt="" /> */}
 
         <div className="context-wrapper">
           <div className="upper-text-container">

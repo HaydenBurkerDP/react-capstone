@@ -6,7 +6,7 @@
   @include box-shadow;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: $white;
 
   .left-icons {
     display: flex;
@@ -23,17 +23,17 @@
   .left-icons,
   .right-icons {
     a {
-      color: gray;
+      color: $gray;
 
       .icon {
         transition: 0.5s;
       }
       &:hover {
-        color: green;
+        color: $green;
       }
 
       &.active {
-        color: black;
+        color: $black;
       }
     }
   }

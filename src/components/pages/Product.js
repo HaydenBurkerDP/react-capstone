@@ -57,8 +57,10 @@ export default function Product(props) {
 
       <div className="product-info">
         <h1 className="product-title">{product?.title}</h1>
+
         <p className="product-desc">{product.description}</p>
         <p className="product-price">${product.price}</p>
+
         <div className="rating-wrapper">
           <div className="star-rating">
             <p>{product.rating?.rate}</p>
@@ -66,6 +68,7 @@ export default function Product(props) {
           </div>
           <p>{product.rating?.count} ratings</p>
         </div>
+
         <button
           className="cart-btn"
           onClick={() => {

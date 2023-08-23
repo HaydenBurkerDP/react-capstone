@@ -14,7 +14,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-center">
-        <p>Free shipping on all orders over $85</p>
+        <p>HANDO</p>
       </div>
 
       <div className="footer-right">
