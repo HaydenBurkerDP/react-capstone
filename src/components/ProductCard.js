@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { addToCart } from "./util/shoppingCart";
+import { successfulToast } from "./util/toastNotifications";
 
 export default function ProductCard(props) {
   const { product } = props;
@@ -21,7 +22,15 @@ export default function ProductCard(props) {
         <Link to={`/product/${product.id}`}>
           <button>See all details</button>
         </Link>
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+        <button
+          onClick={() => {
+            if (addToCart(product)) {
+              successfulToast("Item added to cart");
+            }
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );

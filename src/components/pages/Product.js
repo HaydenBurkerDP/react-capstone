@@ -7,6 +7,7 @@ import {
 import { useEffect, useState } from "react";
 
 import { addToCart } from "../util/shoppingCart";
+import { successfulToast } from "../util/toastNotifications";
 
 export default function Product(props) {
   const [product, setProduct] = useState({});
@@ -65,7 +66,14 @@ export default function Product(props) {
           </div>
           <p>{product.rating?.count} ratings</p>
         </div>
-        <button className="cart-btn" onClick={() => addToCart(product)}>
+        <button
+          className="cart-btn"
+          onClick={() => {
+            if (addToCart(product)) {
+              successfulToast("Item added to cart");
+            }
+          }}
+        >
           Add to Cart
         </button>
       </div>

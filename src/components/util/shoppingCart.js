@@ -30,13 +30,15 @@ export function addAmountInCart(shoppingCart, product, addedAmount) {
 export function addToCart(product) {
   product = { ...product, amount: 1 };
   let shoppingCart = loadShoppingCart();
+  let newProduct = false;
 
   if (!isInCart(shoppingCart, product)) {
     shoppingCart.push(product);
+    newProduct = true;
   }
 
   saveShoppingCart(shoppingCart);
-  return shoppingCart;
+  return newProduct;
 }
 
 export function removeFromCart(shoppingCart, product) {

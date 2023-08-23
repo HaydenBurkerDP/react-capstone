@@ -46,9 +46,13 @@ export default function Products() {
       renderedProducts.reverse();
     }
 
-    return renderedProducts.map((product) => (
-      <ProductCard key={product.id} product={product} />
-    ));
+    return renderedProducts.length > 0 ? (
+      renderedProducts.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))
+    ) : (
+      <h1>No Products Found!</h1>
+    );
   }
 
   if (!products.length) {

@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 
 import CartCard from "../CartCard";
+import { successfulToast } from "../util/toastNotifications";
 
 export default function Cart() {
   const [shoppingCart, setShoppingCart] = useState([]);
@@ -36,6 +37,7 @@ export default function Cart() {
       saveShoppingCart(cart);
       return cart;
     });
+    successfulToast("Item removed from cart");
   }
 
   if (shoppingCart.length === 0) {

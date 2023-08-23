@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { successfulToast } from "../util/toastNotifications";
+
 export default function Contact() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -12,6 +14,7 @@ export default function Contact() {
     setLastName("");
     setEmail("");
     setMessage("");
+    successfulToast("Your message has been sent!");
   }
 
   function isFormFilled() {
