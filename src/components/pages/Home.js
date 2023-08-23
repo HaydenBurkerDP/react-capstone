@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 import handoBlack from "../../images/hando-black.png";
 import tvScreen from "../../images/tv-screen.png";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (

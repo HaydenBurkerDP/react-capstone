@@ -54,3 +54,7 @@ export function calculatePrice(shoppingCart) {
 
   return price;
 }
+
+export function displayPrice(price) {
+  return `$${price.toFixed(2)}`;
+}

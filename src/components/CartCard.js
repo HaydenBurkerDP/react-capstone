@@ -1,3 +1,5 @@
+import { displayPrice } from "./util/shoppingCart";
+
 export default function CartCard(props) {
   const { product, addAmount, removeAmount, removeFromCart } = props;
 
@@ -15,7 +17,7 @@ export default function CartCard(props) {
       <div className="card-right">
         <p className="title">{truncate(product.title, 40)}</p>
         <p className="description">{truncate(product.description, 80)}</p>
-        <p>${product.price}</p>
+        <p>{displayPrice(product.price)}</p>
         <p>Amount: {product.amount}</p>
         <div className="cart-btns">
           <button onClick={addAmount}>+</button>

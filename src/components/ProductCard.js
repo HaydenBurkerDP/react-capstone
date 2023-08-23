@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { addToCart } from "./util/shoppingCart";
+import { addToCart, displayPrice } from "./util/shoppingCart";
 import { successfulToast } from "./util/toastNotifications";
 
 export default function ProductCard(props) {
@@ -17,7 +17,7 @@ export default function ProductCard(props) {
       <p className="title">{truncate(product.title, 24)}</p>
       <img className="product-img" src={product.image} alt={product.title} />
       <p className="description">{truncate(product.description, 60)}</p>
-      <p>${product.price}</p>
+      <p>{displayPrice(product.price)}</p>
       <div className="product-btns">
         <Link to={`/product/${product.id}`}>
           <button>See all details</button>

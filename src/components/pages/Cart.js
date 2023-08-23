@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import {
   addAmountInCart,
   calculatePrice,
+  displayPrice,
   loadShoppingCart,
   removeFromCart,
   saveShoppingCart,
 } from "../util/shoppingCart";
-import { Link } from "react-router-dom";
-
 import CartCard from "../CartCard";
 import { successfulToast } from "../util/toastNotifications";
 
@@ -18,10 +19,6 @@ export default function Cart() {
   useEffect(() => {
     setShoppingCart(loadShoppingCart());
   }, []);
-
-  function displayPrice(price) {
-    return price.toFixed(2);
-  }
 
   function handleChangeAmount(product, amount) {
     setShoppingCart((cart) => {
@@ -72,7 +69,7 @@ export default function Cart() {
       </div>
 
       <div className="checkout-wrapper">
-        <h1>Total Cost: ${displayPrice(totalCost)}</h1>
+        <h1>Total Cost: {displayPrice(totalCost)}</h1>
 
         <button className="checkout-btn">Proceed to checkout</button>
       </div>

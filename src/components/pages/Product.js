@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
-import { addToCart } from "../util/shoppingCart";
+import { addToCart, displayPrice } from "../util/shoppingCart";
 import { successfulToast } from "../util/toastNotifications";
 
 export default function Product(props) {
@@ -59,7 +59,7 @@ export default function Product(props) {
         <h1 className="product-title">{product?.title}</h1>
 
         <p className="product-desc">{product.description}</p>
-        <p className="product-price">${product.price}</p>
+        <p className="product-price">{displayPrice(product.price)}</p>
 
         <div className="rating-wrapper">
           <div className="star-rating">
