@@ -69,7 +69,7 @@ export default function Cart() {
       </div>
 
       <div className="checkout-wrapper">
-        <h1>Total Cost: {displayPrice(totalCost)}</h1>
+        <h2>Total Cost: {displayPrice(totalCost)}</h2>
 
         <button className="checkout-btn">Proceed to checkout</button>
       </div>

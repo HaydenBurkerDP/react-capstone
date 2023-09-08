@@ -4,8 +4,7 @@
   .upper-content-wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 1.5% 10%;
-    min-width: 650px;
+    margin: 1.5rem 10%;
 
     .logo {
       display: flex;
@@ -65,8 +64,7 @@
 
     .product-image {
       width: 600px;
-      height: 550px;
-      padding: 0px 50px;
+      padding: 50px 50px;
       max-width: 80vw;
     }
 
@@ -78,19 +76,23 @@
       width: 700px;
       margin: 50px 0px;
 
+      p {
+        text-align: center;
+      }
+
       .upper-text-container {
         background-color: $green;
-        height: 85px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 500px;
+        padding: 1rem 1.5rem;
         border-radius: 10px;
 
         p {
           color: $very-light-gray;
           font-size: 30pt;
           font-weight: bold;
+          margin: 0;
         }
       }
 
@@ -157,9 +159,37 @@
           font-size: 20pt;
           border-right: 1px solid $light-gray;
           height: 100px;
-          width: 150px;
+          width: 140px;
           text-align: center;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    .upper-content-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .logo {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    .mid-content-wrapper {
+      .product-image {
+        padding: 50px 0px;
+      }
+
+      .context-wrapper {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
       }
     }
   }

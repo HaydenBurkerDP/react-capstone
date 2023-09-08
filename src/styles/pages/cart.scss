@@ -37,6 +37,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
+    gap: 0.5rem;
 
     .checkout-btn {
       padding: 0.5rem 1rem;
@@ -49,6 +50,16 @@
       &:hover {
         background-color: $green;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-container {
+    .checkout-wrapper {
+      .checkout-btn {
+        width: 80px;
       }
     }
   }

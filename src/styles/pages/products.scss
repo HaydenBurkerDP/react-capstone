@@ -58,3 +58,27 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .products-container {
+    .filters-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .filters-wrapper {
+        flex-direction: column;
+      }
+
+      .sort-wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .product-list-wrapper {
+    .product-card-container {
+      padding: 20px 5px;
+    }
+  }
+}

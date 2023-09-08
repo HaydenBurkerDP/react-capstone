@@ -12,6 +12,7 @@
     .product-img {
       width: 300px;
       height: 300px;
+      max-width: 60vw;
     }
   }
 
@@ -29,5 +30,12 @@
       gap: 10px;
       white-space: nowrap;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-card-container {
+    flex-direction: column;
+    gap: 0;
   }
 }
